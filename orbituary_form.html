@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Obituary Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="obituaryForm" method="POST" action="submit_obituary">
+        </form>
+    <script src="script.js"></script>
+</body>
+
+<form id="obituaryForm" method="POST" action="submit_obituary">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="dateOfBirth">Date of Birth:</label>
+    <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+
+    <label for="dateOfDeath">Date of Death:</label>
+    <input type="date" id="dateOfDeath" name="dateOfDeath" required>
+
+    <label for="content">Content:</label>
+    <textarea id="content" name="content" required></textarea>
+
+    <label for="author">Author:</label>
+    <input type="text" id="author" name="author" required>
+
+    <button type="submit">Submit Obituary</button>
+</form>
+<script
+const form = document.getElementById('obituaryForm');
+
+form.addEventListener('submit', (event) => {
+    
+    const name = document.getElementById('name').value;
+    if (name === '') {
+        alert('Please enter a name');
+        event.preventDefault();
+    }
+});
+<script>
+
+</html>
